@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\Users\user\Desktop\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\Users\user\Desktop\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\Users\user\Desktop\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\Users\user\Desktop\Lab2\Lab2\obj\Debug\Lab2.pdb
+C:\Users\user\Desktop\Lab2\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
+C:\BKIT\Laboratories\Lab2\Lab2\bin\Debug\Lab2.exe.config
+C:\BKIT\Laboratories\Lab2\Lab2\obj\Debug\Lab2.exe
+C:\BKIT\Laboratories\Lab2\Lab2\obj\Debug\Lab2.pdb
+C:\BKIT\Laboratories\Lab2\Lab2\bin\Debug\Lab2.exe
+C:\BKIT\Laboratories\Lab2\Lab2\bin\Debug\Lab2.pdb
+C:\BKIT\Laboratories\Lab2\Lab2\obj\Debug\Lab2.csprojResolveAssemblyReference.cache
