@@ -7,3 +7,6 @@ C:\Users\user\Desktop\Lab1\Lab1\obj\Debug\Lab1.csprojResolveAssemblyReference.ca
 C:\BKIT\Lab1\Lab1\bin\Debug\Lab1.exe.config
 C:\BKIT\Lab1\Lab1\obj\Debug\Lab1.exe
 C:\BKIT\Lab1\Lab1\obj\Debug\Lab1.pdb
+C:\BKIT\Laboratories\Lab1\Lab1\bin\Debug\Lab1.exe.config
+C:\BKIT\Laboratories\Lab1\Lab1\obj\Debug\Lab1.exe
+C:\BKIT\Laboratories\Lab1\Lab1\obj\Debug\Lab1.pdb
