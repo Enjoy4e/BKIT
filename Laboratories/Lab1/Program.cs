@@ -4,14 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab2
+namespace Lab1
 {
-    class Square : Rectangle
+    class Program
     {
-        public Square(double a)
-            : base(a, a)
+        static void Main(string[] args)
         {
-            this.Type = "Квадрат";
         }
     }
 }
