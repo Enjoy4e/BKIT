@@ -10,6 +10,9 @@ namespace Lab1
     {
         static void Main(string[] args)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("Лабораторная работа 1 - 'Решение биквадратных уравнений'");
+            Console.Title = "Выполнил:Ли М.В. Группа:ИУ5-34Б";
         }
     }
 }
