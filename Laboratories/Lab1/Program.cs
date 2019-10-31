@@ -19,9 +19,35 @@ namespace Lab1
         }
         static bool AskContinue()
         {
+            Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write("\nПродолжить? (y/n): ");
             string s = Console.ReadLine();
+            Console.ResetColor();
             return !(s == "n");
+        }
+        static double ReadArgs(string cout)
+        {
+            double doubleCase;
+            string inputCase;
+            bool stop = false;
+
+            do
+            {
+                Console.Write(cout);
+                Console.ResetColor();
+                Console.ForegroundColor = ConsoleColor.Magenta;
+                inputCase = Console.ReadLine();
+                stop = double.TryParse(inputCase, out doubleCase);
+                if (stop == false)
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Коэффициент веден неверно. Повторите ввод\n");
+                    Console.ResetColor();
+                }
+            } while (!stop);
+            Console.ResetColor();
+
+            return doubleCase;
         }
         static void Main(string[] args)
         {
@@ -30,17 +56,27 @@ namespace Lab1
             Console.Title = "Выполнил:Ли М.В. Группа:ИУ5-34Б";
             do
             {
+                double A, B, C;
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Введите значения коэффициентов A,B,C");
                 Console.ResetColor();
-                Console.ForegroundColor = ConsoleColor.Magenta;
-                Console.Write("Введите значение коэф.А: ");
-                double A = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Введите значение коэф.В: ");
-                double B = Convert.ToDouble(Console.ReadLine());
-                Console.Write("Введите значение коэф.С: ");
-                double C = Convert.ToDouble(Console.ReadLine());
-                Console.ResetColor();
+                if (args.Length == 3) 
+                {
+                    double.TryParse(args[0], out A);
+                    double.TryParse(args[1], out B);
+                    double.TryParse(args[2], out C);
+                    Array.Resize(ref args, 0);
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    A = ReadArgs("Введите значение коэф.А: ");
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    B = ReadArgs("Введите значение коэф.В: ");
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    C = ReadArgs("Введите значение коэф.С: ");
+                    Console.ResetColor();
+                }
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("Данные введены верно? (y/n):");
                 string proverka = Console.ReadLine();
@@ -49,6 +85,7 @@ namespace Lab1
                 {
                     goto Finish;
                 }
+
                 if (A == 0 && C == 0 && B == 0)
                 {
                     Console.ForegroundColor = ConsoleColor.Yellow;

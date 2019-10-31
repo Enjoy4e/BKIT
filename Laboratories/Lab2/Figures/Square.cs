@@ -13,5 +13,9 @@ namespace Lab2
         {
             this.Type = "Квадрат";
         }
+        public override string ToString()
+        {
+            return "Квадрат площадью " + this.Square();
+        }
     }
 }

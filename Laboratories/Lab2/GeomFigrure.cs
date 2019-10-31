@@ -22,9 +22,6 @@ namespace Lab2
         }
 
         public abstract double Square();
-        public override string ToString()
-        {
-            return this.type + " имеет площадь = " + this.Square();
-        }
+        public abstract override string ToString();
     }
 }

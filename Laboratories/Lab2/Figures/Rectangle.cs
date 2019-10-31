@@ -20,6 +20,10 @@ namespace Lab2
         {
             return this.width * this.lenght;
         }
+        public override string ToString()
+        {
+            return "Прямоугольник площадью " + this.Square();
+        }
         public void Print()
         {
             Console.ForegroundColor = ConsoleColor.Green;

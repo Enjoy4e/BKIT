@@ -24,5 +24,9 @@ namespace Lab2
                 Console.WriteLine(this.ToString());
                 Console.ResetColor();
             }
+            public override string ToString()
+            {
+                return "Круг площадью " + this.Square();
+            }
     }
 }
