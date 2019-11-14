@@ -19,7 +19,7 @@ namespace Lab2
         static bool AskContinue()
         {
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.Write("\nПродолжить? (y/n): ");
+            Console.Write("\nПродолжить? (press any button/n): ");
             string s = Console.ReadLine();
             return !(s == "n");
             Console.ResetColor();
@@ -46,7 +46,9 @@ namespace Lab2
             Console.WriteLine("Лабораторная работа 2 - 'Нахождение площадей фигур'");
             Console.Title = "Выполнил:Ли М.В. Группа:ИУ5-34Б";
             Console.ResetColor();
-            IPrint obj;
+            Rectangle rect;
+            Circle circ;
+            Square squar;
             double a1, b1;
             do
             {
@@ -56,23 +58,23 @@ namespace Lab2
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         a1 = Continue("Введите значение длины прямоугольника: ");
                         b1 = Continue("Введите значение ширины прямоугольника: ");
-                        obj = new Rectangle(a1, b1);
-                        obj.Print();
+                        rect = new Rectangle(a1, b1);
+                        rect.Print();
                         Console.ResetColor();
                         break;
 
                     case 2:
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         a1 = Continue("Введите значение стороны квадрата:");
-                        obj = new Square(a1);
-                        obj.Print();
+                        squar = new Square(a1);
+                        squar.Print();
                         Console.ResetColor();
                         break;
                     case 3:
                         Console.ForegroundColor = ConsoleColor.Magenta;
                         a1 = Continue("Введите значение радиуса окружности: ");
-                        obj = new Circle(a1);
-                        obj.Print();
+                        circ = new Circle(a1);
+                        circ.Print();
                         Console.ResetColor();
                         break;
                     case 4:
