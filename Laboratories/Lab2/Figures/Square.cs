@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Square : Rectangle
+    class Square : Rectangle, IPrint
     {
         public Square(double a)
             : base(a, a)
