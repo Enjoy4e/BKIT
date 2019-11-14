@@ -20,7 +20,7 @@ namespace Lab1
         static bool AskContinue()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("\nПродолжить? (y/n): ");
+            Console.Write("\nПродолжить? (press any button/n): ");
             string s = Console.ReadLine();
             Console.ResetColor();
             return !(s == "n");
@@ -98,7 +98,7 @@ namespace Lab1
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine("x = 0");
                     Console.ResetColor();
-                    goto kostil;
+                    goto Finish;
                 }
                 else if (A == 0)
                 {
@@ -150,6 +150,14 @@ namespace Lab1
                     }
 
                 }
+                if (C == 0)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine("Введите другие коэффициенты");
+                    Console.ResetColor();
+                    goto Finish;
+                }
+
                 double Discr = System.Math.Pow(B, 2) - (4 * A * C);
                 if (Discr > 0)
                 {
@@ -220,10 +228,6 @@ namespace Lab1
                 }
             Finish:
             Solution:
-            kostil:
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Kорней нет");
-                Console.ResetColor();
                 Console.WriteLine(" ");
             } while (AskContinue());
         }
