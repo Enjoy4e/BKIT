@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using System.Diagnostics;
+using Lab5;
 namespace Lab4
 {
     public partial class Searcher : Form
@@ -21,17 +22,24 @@ namespace Lab4
 
         private void Search_Click(object sender, EventArgs e)
         {
-            if (Words == null)
+            int m;
+            if (Words == null || !Int32.TryParse(max.Text, out m))
                 return;
             String a = Pattern.Text;
             WordList.Items.Clear();
             WordList.BeginUpdate();
             foreach (String x in Words)
             {
-                if (x.ToLower().Contains(a.ToLower()))
-                {
-                    WordList.Items.Add(x);
-                }
+                if (checkBox1.Checked == true)
+                    if ((Levenstein.levdist(x, Pattern.Text)) < m)
+                    {
+                        WordList.Items.Add(x);
+                    }
+                if (checkBox1.Checked == false)
+                    if ((Levenstein.Distance(x, Pattern.Text)) < m)
+                    {
+                        WordList.Items.Add(x);
+                    }
             }
             WordList.EndUpdate();
         }
@@ -66,7 +74,23 @@ namespace Lab4
 
         }
 
+
         private void Searcher_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Searcher_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }

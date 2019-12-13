@@ -6,27 +6,28 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Circle: GeomFigure, IPrint
+
+    public class Circle : GeomFigure, IPrint, IComparable
     {
-            double radius;
-            public Circle(double rad)
-            {
-                this.radius = rad;
-                this.Type = "Круг";
-            }
-            public override double Square()
-            {
-                return System.Math.PI * this.radius * this.radius;
-            }
-            public void Print()
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine(this.ToString());
-                Console.ResetColor();
-            }
-            public override string ToString()
-            {
-                return "Круг площадью " + this.Square();
-            }
+        double radius;
+        public Circle(double rad)
+        {
+            this.radius = rad;
+            this.Type = "Круг";
+        }
+        public override double Square()
+        {
+            return System.Math.PI * this.radius * this.radius;
+        }
+        public void Print()
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine(this.ToString());
+            Console.ResetColor();
+        }
+        public override string ToString()
+        {
+            return "Круг площадью " + this.Square();
+        }
     }
 }

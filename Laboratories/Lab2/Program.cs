@@ -40,6 +40,24 @@ namespace Lab2
             return vibor;
 
         }
+        public interface IMatrixCheckEmpty<T>
+        {
+            T getEmptyElement();
+            bool checkEmptyElement(T element);
+        }
+        public int CompareTo(object obj)
+        {
+            GeomFigure p = (GeomFigure)obj;
+
+            if (this.Square() < p.Square()) return -1;
+            else if (this.Square() == p.Square()) return 0;
+            else return 1;
+        }
+
+        private double Square()
+        {
+            throw new NotImplementedException();
+        }
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;

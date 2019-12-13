@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    abstract class GeomFigure
+    public abstract class GeomFigure: IComparable
     {
         string type;
         public string Type
@@ -23,5 +23,19 @@ namespace Lab2
 
         public abstract double Square();
         public abstract override string ToString();
+        public interface IMatrixCheckEmpty<T>
+        {
+            T getEmptyElement();
+            bool checkEmptyElement(T element);
+        }
+        public int CompareTo(object obj)
+        {
+            GeomFigure p = (GeomFigure)obj;
+
+            if (this.Square() < p.Square()) return -1;
+            else if (this.Square() == p.Square()) return 0;
+            else return 1;
+        }
     }
+
 }

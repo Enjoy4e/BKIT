@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    class Rectangle : GeomFigure, IPrint
+
+    public class Rectangle : GeomFigure, IPrint, IComparable
     {
         double width;
         double lenght;

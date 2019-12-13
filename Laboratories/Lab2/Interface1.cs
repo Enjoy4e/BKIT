@@ -6,8 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    interface IPrint
+    public interface IPrint 
     {
         void Print();
+    }
+    public interface CheckEmpty<T>
+    {
+        T getEmptyElement();
+        bool checkEmptyElement(T element);
     }
 }
