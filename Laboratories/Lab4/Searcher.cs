@@ -31,19 +31,18 @@ namespace Lab4
             foreach (String x in Words)
             {
                 if (checkBox1.Checked == true)
-                    if ((Levenstein.levdist(x, Pattern.Text)) < m)
+                    if ((Levenstein.Distance(x, Pattern.Text)) <= m)
                     {
                         WordList.Items.Add(x);
                     }
                 if (checkBox1.Checked == false)
-                    if ((Levenstein.Distance(x, Pattern.Text)) < m)
+                    if ((Levenstein.Distance(x, Pattern.Text)) <= m)
                     {
                         WordList.Items.Add(x);
                     }
             }
             WordList.EndUpdate();
         }
-
         private void OpenFile_Click(object sender, EventArgs e)
         {
             Stopwatch stopwatch = new Stopwatch();
